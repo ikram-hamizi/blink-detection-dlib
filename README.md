@@ -27,12 +27,12 @@ To run the program from a docker image a Linux terminal, run this (solution from
 docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix ikramhub/blink-counter
 ```
 The run the program:
-- **Example (1):**
+- **Example (1):** using a video file
 ```bash
 python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --video blink_detection_demo.mp4 --EAR 0.3
 ```
 
-- **Example (2):**
+- **Example (2):** using the built-in webcam
 ```bash
 python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webcam 0 --EAR 0.25
 ```
