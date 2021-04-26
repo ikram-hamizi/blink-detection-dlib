@@ -2,8 +2,9 @@
 
 ## PROGRAM:
 Detects the number of blinks of a person in real time and sleeping.
-- **INPUT:** video from a file path / video from a webcam.
-- **OUTPUT:** Window with the video + the number of blinks
+- **INPUT:** `p` a pretrained facial landmarks detectors 
+- **Optional Input**: `--video` path of a video file. The default is: a video stream from a webcam.
+- **OUTPUT:** A window with the video + the number of blinks
 
 ## PROPERTIES:
 1. Only one person should be in the video (+)
@@ -30,7 +31,7 @@ docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --devic
 (solution to access the webcam from [LINK: '**Test camera with**'](https://stackoverflow.com/a/64634921/8664083))
 
 
-#### METHOD (2): Build an image locally
+#### METHOD (2): Build an image locally from Dockerfile
 Clone the repository + run this to build an image:
 ```bash 
 docker build -t blink-counter .
