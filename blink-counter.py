@@ -130,7 +130,7 @@ predictor = dlib.shape_predictor(args["shape_predictor"])
 (rStart, rEnd) = face_utils.FACIAL_LANDMARKS_IDXS["right_eye"]
 
 
-# II. Determine the type of input + start the video stream thread
+# III. Determine the type of input + start the video stream thread
 print("[INFO] starting video stream thread...")
 
 # if --video: input is a video file from disk
