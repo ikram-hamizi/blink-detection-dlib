@@ -38,7 +38,16 @@ python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webca
 ```
 
 #### METHOD (2):
-Clone the repository and run the commands in option (1) withouth `ikramhub/` before `blink-counter`.
+Clone the repository and run the commands in option (1) without `ikramhub/` before `blink-counter`.
+
+#### METHOD (3):
+Download the following main files and run the commands in Exampe (1) or (2). You may have to donwload libraries and dependencies (see file: _run.sh_)
+
+```bash
+├── Loud_Alarm_Clock_Buzzer.wav            <- alarm file
+├── blink-counter.py                       <- blink detection script
+└── shape_predictor_68_face_landmarks.dat  <- pretrained facial landmarks detectors
+```
 
 #### CMD [OPTIONS]:
 
