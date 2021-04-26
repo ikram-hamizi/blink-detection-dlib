@@ -38,7 +38,7 @@ python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webca
 ```
 
 #### METHOD (2):
-Clone the repository and run the commands in option (1) without `ikramhub/` before `blink-counter`.
+Clone the repository and run the same commands in METHOD (1) without `ikramhub/` before the image tag `blink-counter`.
 
 #### METHOD (3):
 Download the following main files and run the commands in Exampe (1) or (2). You may have to donwload libraries and dependencies (see file: _run.sh_)
@@ -63,4 +63,4 @@ ________________________________________________________________________________
 
 `--EAR:`	EAR threshold to count a blink (default=0.25)
 
-(From: _print_usage.sh_)
+(see file: _print_usage.sh_)
