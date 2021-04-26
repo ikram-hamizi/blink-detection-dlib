@@ -1,4 +1,4 @@
-# Eye Blink Detection [REPO: blink-detection-dlib]
+# Eye Blink Detection
 
 ## PROGRAM:
 Detects the number of blinks of a person in real time. 
