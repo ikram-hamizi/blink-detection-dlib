@@ -29,11 +29,12 @@ docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --devic
 ```
 (solution to access the webcam from [LINK: '**Test camera with**'](https://stackoverflow.com/a/64634921/8664083))
 
+
 #### METHOD (2): Build an image locally
 Clone the repository + run this to build an image:
 ```bash 
-docker build - tag blink-counter .
-
+docker build -t blink-counter .
+```
 ```bash 
 docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix ikramhub/blink-counter
 ``````
