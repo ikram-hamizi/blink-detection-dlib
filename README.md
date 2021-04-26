@@ -42,7 +42,7 @@ Clone the repository and run the commands in option (1) withouth `ikramhub/` bef
 
 #### CMD [OPTIONS]:
 
-Usage:	python blink-counter.py -p [shape_predictor.dat] [OPTIONS]
+Usage:	`python blink-counter.py -p [shape_predictor.dat] [OPTIONS]`
 ___________________________________________________________________________________________________________
 `-p` or `--shape-predictor [file.dat]`:	(required) dlib pre-trained facial landmark detector
 
