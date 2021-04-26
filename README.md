@@ -44,4 +44,17 @@ python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webca
 Clone the repository and run the commands 2 and 3 in OPTION(1).
 
 #### CMD [OPTIONS]:
-Check the file _print_usage.sh_ in this repository for more information about the tags/arguments/options.
+
+Usage:	python blink-counter.py -p [shape_predictor.dat] [OPTIONS]
+___________________________________________________________________________________________________________
+`-p` or `--shape-predictor [file.dat]`:	(required) dlib pre-trained facial landmark detector
+
+`-a [True/False]:`	activates alarm option
+
+`-v or --video [file.mp4]:`	video file path
+
+`-w or --webcam [integer]:`	an integer index of the webcam on the system
+
+`--EAR:`	EAR threshold to count a blink (default=0.25)
+
+(From: _print_usage.sh_)
