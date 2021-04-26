@@ -22,7 +22,7 @@ The program is written following the guide by Adrian Rosebrock from PyImageSearc
 - Drawing of landmarks: cv2 and with the help of imutils libraries
 
 ## USAGE: 
-#####1. Build the program locally or Pull it from Docker Hub:
+##### 1. Build the program locally or Pull it from Docker Hub:
 #### METHOD (1): Pull from Docker Hub
 On a linux terminal, run this command to run a container:
 ```bash 
@@ -51,7 +51,8 @@ Download the following main files + run the program directly (without pulling or
 └── shape_predictor_68_face_landmarks.dat  <- pretrained facial landmarks detectors
 ```
 
-#####2. Run the program
+
+##### 2. Run the program
 - **Example (1):** using a video file
 You can use a video file that is already in the container (source: [LINK](https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)) 
 ```bash
