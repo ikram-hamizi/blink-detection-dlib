@@ -62,7 +62,7 @@ python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --video
 
 Alternatively, you can load your own file before running the previous command:
 ```bash
-docker cp /hostfile  (container_id):/app #copy the file from host to container
+docker cp /home/path/hostfile.mp4  <CONTAINER_ID>:/app #copy the file from host to container
 ```
 
 - **Example (2):** using the built-in webcam
@@ -72,6 +72,7 @@ docker exec -it <CONTAINER_ID> /bin/bash
 python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webcam 0 --EAR 0.25
 ```
 
+3. Quit by hitting the key: "q". To exit the container type `exit`.
 
 #### CMD [OPTIONS]:
 
