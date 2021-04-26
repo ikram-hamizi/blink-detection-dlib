@@ -11,7 +11,7 @@ Detects the number of blinks of a person in real time.
 3. Minimum resolution should be 480p using the (4:3) Standard (i.e. 480x640p) (+)
 
 4. Increments the number of blinks [upper-left corner]
-5. If the eyes are closed for more than 2 seconds, a message "Alert!" appears in red (+ --alarm sound option)
+5. If the eyes are closed for more than 2 seconds, a message "Alert!" appears in red (+ `--alarm` sound option)
 6. Draws the facial landmarks (eyes + bounding box of the face (+))
 
 ## SOURCE: 
