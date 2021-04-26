@@ -1,12 +1,16 @@
 # Eye Blink Detection
 
-**LIMITATION**: The lightweight installation of OpenCV is unstable (e.g. screen can go black, messages in the terminal...). Although I installed a lihghtweight version of OpenCV, I recommend the proper installation following this tutorial [LINK](https://www.pyimagesearch.com/2018/08/15/how-to-install-opencv-4-on-ubuntu/). It takes a long time however. 
+**LIMITATION 1**: The lightweight installation of OpenCV is unstable (e.g. screen can go black, messages in the terminal...). Although I installed a lihghtweight version of OpenCV, I recommend the proper installation following this tutorial [LINK](https://www.pyimagesearch.com/2018/08/15/how-to-install-opencv-4-on-ubuntu/). It takes a long time however. 
+
+**LIMITATION 2**: Depending on the host system, the option `--alarm` might result in an error: `ALSA lib pcm_dmix.c (snd_pcm_dmix_open) unable to open slave` (ALSA manages the sound card at the kernel level).
+
 
 ## PROGRAM:
 Detects the number of blinks of a person in real time and sleeping.
 - **INPUT:** `-p` a pretrained facial landmarks detectors 
 - **Optional Input**: `--video` path of a video file. The default is: a video stream from a webcam.
 - **OUTPUT:** A window with the video + the number of blinks
+
 
 ## PROPERTIES:
 1. Only one person should be in the video (+)
@@ -16,6 +20,7 @@ Detects the number of blinks of a person in real time and sleeping.
 4. Increments the number of blinks [upper-left corner]
 5. If the eyes are closed for more than 2 seconds, a message "Alert!" appears in red (+ `--alarm` sound option)
 6. Draws the facial landmarks (eyes + bounding box of the face (+))
+
 
 ## SOURCE: 
 The program is written following the guide by Adrian Rosebrock from PyImageSearch: [LINK](https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)
@@ -33,6 +38,7 @@ docker run -d --rm --privileged -e DISPLAY=:0 --device=/dev/video0:/dev/video0 -
 (The command allows to access the webcam [LINK: '**Test camera with**'](https://stackoverflow.com/a/64634921/8664083))
 
 
+
 #### METHOD (2): Build an image locally from Dockerfile
 Clone the repository + run this command to build an image and run a container:
 ```bash 
@@ -41,6 +47,7 @@ docker build -t blink-counter .
 ```bash 
 docker run -d --rm --privileged -e DISPLAY=:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix blink-counter  tail -f /dev/null
 ```
+
 
 #### METHOD (3): No building/pulling required
 Download the following main files + run the program directly (without pulling or building).
@@ -60,7 +67,7 @@ You can use a video file that is already in the container (source: [LINK](https:
 ```bash
 docker ps #copy the container ID from IMAGE: ikramhub/blink-counter
 docker exec -it <CONTAINER_ID> /bin/bash
-python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --video blink_detection_demo.mp4 --EAR 0.3
+python blink-counter.py -p shape_predictor_68_face_landmarks.dat --video blink_detection_demo.mp4 --EAR 0.3
 ```
 
 Alternatively, you can load your own file before running the previous command:
@@ -72,7 +79,7 @@ docker cp /home/path/hostfile.mp4  <CONTAINER_ID>:/app #copy the file from host 
 ```bash
 docker ps #copy the container ID from IMAGE: ikramhub/blink-counter
 docker exec -it <CONTAINER_ID> /bin/bash
-python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webcam 0 --EAR 0.25
+python blink-counter.py -p shape_predictor_68_face_landmarks.dat --webcam 0 --EAR 0.25
 ```
 
 3. Quit by hitting the key: "q". To exit the container type `exit`.
@@ -83,7 +90,7 @@ Usage:	`python blink-counter.py -p [shape_predictor.dat] [OPTIONS]`
 ___________________________________________________________________________________________________________
 `-p` or `--shape-predictor [file.dat]`:	(required) dlib pre-trained facial landmark detector
 
-`-a [True/False]:`	activates alarm option
+`-a [True/False]:`	activates alarm option #needs maintenance
 
 `-v or --video [file.mp4]:`	video file path
 
