@@ -1,6 +1,6 @@
 # Eye Blink Detection
 
-**NOTE**: Although I installed a lihtweight version of OpenCV, I recommend the proper installation following this tutorial [LINK](https://www.pyimagesearch.com/2018/08/15/how-to-install-opencv-4-on-ubuntu/). It takes a long time however.
+**LIMITATION**: The lightweight installation of OpenCV is unstable (e.g. screen can go black, messages in the terminal...). Although I installed a lihghtweight version of OpenCV, I recommend the proper installation following this tutorial [LINK](https://www.pyimagesearch.com/2018/08/15/how-to-install-opencv-4-on-ubuntu/). It takes a long time however. 
 
 ## PROGRAM:
 Detects the number of blinks of a person in real time and sleeping.
