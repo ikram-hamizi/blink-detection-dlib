@@ -26,7 +26,7 @@ The program is written following the guide by Adrian Rosebrock from PyImageSearc
 #### METHOD (1): Pull from Docker Hub
 On a linux terminal, run this command to run a container:
 ```bash 
-docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix ikramhub/blink-counter
+docker run -d --rm --privileged -e DISPLAY=:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix ikramhub/blink-counter  tail -f /dev/null
 ```
 (solution to access the webcam from [LINK: '**Test camera with**'](https://stackoverflow.com/a/64634921/8664083))
 
@@ -37,8 +37,8 @@ Clone the repository + run this to build an image:
 docker build -t blink-counter .
 ```
 ```bash 
-docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix blink-counter
-``````
+docker run -d --rm --privileged -e DISPLAY=:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix blink-counter  tail -f /dev/null
+```
 
 #### METHOD (3): No building/pulling required
 Download the following main files + run the program directly (without pulling or building).
@@ -53,12 +53,22 @@ Download the following main files + run the program directly (without pulling or
 
 2. Run the program
 - **Example (1):** using a video file
+You can use a video file that is already in the container (source: [LINK](https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)) 
 ```bash
+docker ps #copy the container ID from IMAGE: ikramhub/blink-counter
+docker exec -it <CONTAINER_ID> /bin/bash
 python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --video blink_detection_demo.mp4 --EAR 0.3
+```
+
+Alternatively, you can load your own file before running the previous command:
+```bash
+docker cp /hostfile  (container_id):/app #copy the file from host to container
 ```
 
 - **Example (2):** using the built-in webcam
 ```bash
+docker ps #copy the container ID from IMAGE: ikramhub/blink-counter
+docker exec -it <CONTAINER_ID> /bin/bash
 python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webcam 0 --EAR 0.25
 ```
 
