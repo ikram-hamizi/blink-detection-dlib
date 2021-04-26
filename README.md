@@ -34,7 +34,7 @@ docker run -d --rm --privileged -e DISPLAY=:0 --device=/dev/video0:/dev/video0 -
 
 
 #### METHOD (2): Build an image locally from Dockerfile
-Clone the repository + run this to build an image:
+Clone the repository + run this command to build an image and run a container:
 ```bash 
 docker build -t blink-counter .
 ```
