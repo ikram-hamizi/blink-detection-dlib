@@ -22,7 +22,7 @@ The program is written following the guide by Adrian Rosebrock from PyImageSearc
 
 ## USAGE: 
 #### METHOD (1):
-To run the program from a docker image a Linux terminal, run this (solution from [LINK](https://stackoverflow.com/a/64634921/8664083):
+To run the program from a docker image a Linux terminal, run this (solution from [LINK:'_Test camera with_'](https://stackoverflow.com/a/64634921/8664083)):
 ```bash 
 docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix ikramhub/blink-counter
 ```
