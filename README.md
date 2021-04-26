@@ -23,11 +23,8 @@ The program is written following the guide by Adrian Rosebrock from PyImageSearc
 ## USAGE: 
 #### METHOD (1):
 From a Linux terminal, run:
-```bash
-docker run ikramhub/blink-counter
-```
 ```bash 
-docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix blink-counter
+docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix ikramhub/blink-counter
 ```
 The run the program:
 - **Example (1):**
@@ -41,7 +38,7 @@ python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webca
 ```
 
 #### METHOD (2):
-Clone the repository and run the commands 2 and 3 in OPTION(1).
+Clone the repository and run the commands in option (1) withouth `ikramhub/` before `blink-counter`.
 
 #### CMD [OPTIONS]:
 
