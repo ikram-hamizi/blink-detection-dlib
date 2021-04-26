@@ -21,19 +21,27 @@ The program is written following the guide by Adrian Rosebrock from PyImageSearc
 - Drawing of landmarks: cv2 and with the help of imutils libraries
 
 ## USAGE: 
-### METHOD (1):
+#### METHOD (1):
 From a Linux terminal, run:
-1. `docker run ikramhub/blink-counter`
-2. ```bash docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix blink-counter```
-3. Run the program:
+```bash
+docker run ikramhub/blink-counter
+```
+```bash 
+docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix blink-counter
+```
+The run the program:
 - **Example (1):**
-`python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --video blink_detection_demo.mp4 --EAR 0.3`
+```bash
+python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --video blink_detection_demo.mp4 --EAR 0.3
+```
 
 - **Example (2):**
-`python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webcam 0 --EAR 0.25`
+```bash
+python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webcam 0 --EAR 0.25
+```
 
-### METHOD (2):
+#### METHOD (2):
 Clone the repository and run the commands 2 and 3 in OPTION(1).
 
-### CMD [OPTIONS]:
+#### CMD [OPTIONS]:
 Check the file _print_usage.sh_ in this repository for more information about the tags/arguments/options.
