@@ -1,6 +1,6 @@
 # Eye Blink Detection
 
-**LIMITATION 1**: The lightweight installation of OpenCV is unstable (e.g. screen can go black, messages in the terminal...). Although I installed a lihghtweight version of OpenCV, I recommend the proper installation following this tutorial [LINK](https://www.pyimagesearch.com/2018/08/15/how-to-install-opencv-4-on-ubuntu/). It takes a long time however. 
+**LIMITATION 1**: The lightweight installation of OpenCV is unstable (e.g. screen can go black, messages in the terminal...). Although I installed a lihghtweight version of OpenCV, I recommend to edit the Dockerfile dependnecies and do the proper installation [LINK](https://www.pyimagesearch.com/2018/08/15/how-to-install-opencv-4-on-ubuntu/). The downside is that it takes a long time. 
 
 **LIMITATION 2**: Depending on the host system, the option `--alarm` might result in an error: `ALSA lib pcm_dmix.c (snd_pcm_dmix_open) unable to open slave` (ALSA manages the sound card at the kernel level).
 
