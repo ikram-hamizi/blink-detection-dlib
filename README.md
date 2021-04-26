@@ -30,7 +30,7 @@ On a linux terminal, run this command to run a container:
 ```bash 
 docker run -d --rm --privileged -e DISPLAY=:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix ikramhub/blink-counter  tail -f /dev/null
 ```
-(solution to access the webcam from [LINK: '**Test camera with**'](https://stackoverflow.com/a/64634921/8664083))
+(The command allows to access the webcam [LINK: '**Test camera with**'](https://stackoverflow.com/a/64634921/8664083))
 
 
 #### METHOD (2): Build an image locally from Dockerfile
