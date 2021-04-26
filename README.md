@@ -1,5 +1,7 @@
 # Eye Blink Detection
 
+**NOTE**: Although I installed a lihtweight version of OpenCV, I recommend the proper installation following this tutorial [LINK](https://www.pyimagesearch.com/2018/08/15/how-to-install-opencv-4-on-ubuntu/). It takes a long time however.
+
 ## PROGRAM:
 Detects the number of blinks of a person in real time and sleeping.
 - **INPUT:** `p` a pretrained facial landmarks detectors 
