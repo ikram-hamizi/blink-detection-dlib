@@ -21,12 +21,35 @@ The program is written following the guide by Adrian Rosebrock from PyImageSearc
 - Drawing of landmarks: cv2 and with the help of imutils libraries
 
 ## USAGE: 
-#### METHOD (1):
-To run the program from a docker image a Linux terminal, run this (solution to access the webcam from [LINK: '**Test camera with**'](https://stackoverflow.com/a/64634921/8664083)):
+1. Build the program locally or Pull it from Docker Hub:
+#### METHOD (1): Pull from Docker Hub
+On a linux terminal, run this command to run a container:
 ```bash 
 docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix ikramhub/blink-counter
 ```
-The run the program:
+(solution to access the webcam from [LINK: '**Test camera with**'](https://stackoverflow.com/a/64634921/8664083))
+
+#### METHOD (2): Build an image locally
+Clone the repository + run this to build an image:
+```bash 
+docker build - tag blink-counter .
+
+```bash 
+docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix ikramhub/blink-counter
+``````
+
+#### METHOD (3): No building/pulling required
+Download the following main files + run the program directly (without pulling or building).
+
+**NOTE**: You may need to donwload dependencies (see file: _run.sh_)
+
+```bash
+├── Loud_Alarm_Clock_Buzzer.wav            <- alarm file
+├── blink-counter.py                       <- blink detection script
+└── shape_predictor_68_face_landmarks.dat  <- pretrained facial landmarks detectors
+```
+
+2. Run the program
 - **Example (1):** using a video file
 ```bash
 python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --video blink_detection_demo.mp4 --EAR 0.3
@@ -37,17 +60,6 @@ python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --video
 python blink-counter.py -p shape_predictor_68_face_landmarks.dat -a True --webcam 0 --EAR 0.25
 ```
 
-#### METHOD (2):
-Clone the repository and run the same commands in METHOD (1) without `ikramhub/` before the image tag `blink-counter`.
-
-#### METHOD (3):
-Download the following main files and run the commands in Exampe (1) or (2). You may have to donwload libraries and dependencies (see file: _run.sh_)
-
-```bash
-├── Loud_Alarm_Clock_Buzzer.wav            <- alarm file
-├── blink-counter.py                       <- blink detection script
-└── shape_predictor_68_face_landmarks.dat  <- pretrained facial landmarks detectors
-```
 
 #### CMD [OPTIONS]:
 
