@@ -14,13 +14,13 @@ PROGRAM: detects the number of blinks of a person in real time.
 - OUTPUT: Window with the video + the number of blinks
 
 PROPERTIES:
-1- One person should be in the video (ADDED)
-2- The face of the person should cover at least 1/3 of the frame (pixels) (ADDED)
-3- Minimum resolution should be 480p using the (4:3) Standard (i.e. 480x640p) (ADDED)
+1- One person should be in the video (+)
+2- The face of the person should cover at least 1/3 of the frame (pixels) (+)
+3- Minimum resolution should be 480p using the (4:3) Standard (i.e. 480x640p) (+)
 
-3- Increments the number of blinks [upper-left corner]
-4- If the eyes are closef for more than 2 seconds, a message "Alert!" appears in red (+ an alarm sound option) (ADDED)
-5- Draws the facial landmarks (eyes + bounding box of the face (ADDED))
+4- Increments the number of blinks [upper-left corner]
+5- If the eyes are closef for more than 2 seconds, a message "Alert!" appears in red (+ an --alarm sound option) (+)
+6- Draws the facial landmarks (eyes + bounding box of the face (+))
 
 SOURCE: the program is written following the guide in [https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/]
 - The calculation of the Eye Aspect Ratio 
