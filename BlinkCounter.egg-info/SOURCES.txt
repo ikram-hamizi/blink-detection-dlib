@@ -1,0 +1,5 @@
+setup.py
+BlinkCounter.egg-info/PKG-INFO
+BlinkCounter.egg-info/SOURCES.txt
+BlinkCounter.egg-info/dependency_links.txt
+BlinkCounter.egg-info/top_level.txt
