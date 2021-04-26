@@ -1,7 +1,7 @@
 # Eye Blink Detection
 
 ## PROGRAM:
-Detects the number of blinks of a person in real time. 
+Detects the number of blinks of a person in real time and sleeping.
 - **INPUT:** video from a file path / video from a webcam.
 - **OUTPUT:** Window with the video + the number of blinks
 
@@ -17,7 +17,7 @@ Detects the number of blinks of a person in real time.
 ## SOURCE: 
 The program is written following the guide by Adrian Rosebrock from PyImageSearch: [LINK](https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)
 - Detect blinks with the calculation of the Eye Aspect Ratio (EAR)
-- Detect the facial landmarks: dlib library
+- Detect the facial landmarks: dlib’s pre-trained facial landmark detector 
 - Drawing of landmarks: cv2 and with the help of imutils libraries
 
 ## USAGE: 
