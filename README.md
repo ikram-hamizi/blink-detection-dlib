@@ -4,7 +4,7 @@
 
 ## PROGRAM:
 Detects the number of blinks of a person in real time and sleeping.
-- **INPUT:** `p` a pretrained facial landmarks detectors 
+- **INPUT:** `-p` a pretrained facial landmarks detectors 
 - **Optional Input**: `--video` path of a video file. The default is: a video stream from a webcam.
 - **OUTPUT:** A window with the video + the number of blinks
 
