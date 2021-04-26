@@ -36,7 +36,7 @@ Clone the repository + run this to build an image:
 docker build -t blink-counter .
 ```
 ```bash 
-docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix ikramhub/blink-counter
+docker run --rm -it --entrypoint=/bin/bash --privileged -e DISPLAY=$IP:0 --device=/dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix blink-counter
 ``````
 
 #### METHOD (3): No building/pulling required
