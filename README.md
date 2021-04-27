@@ -98,6 +98,6 @@ ________________________________________________________________________________
 
 `-w or --webcam [integer]:`	an integer index of the webcam on the system
 
-`--EAR:`	EAR threshold to count a blink (default=0.25)
+`--EAR [float]:`  EAR threshold to count a blink (default=0.25)
 
 (see file: _print_usage.sh_)
