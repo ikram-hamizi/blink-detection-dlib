@@ -63,6 +63,7 @@ Download the following main files + run the program directly (without pulling or
 
 ### 2. Run the program
 - **Example (1):** using a video file
+
 You can use a video file that is already in the container (source: [LINK](https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)) 
 ```bash
 docker ps #copy the container ID from IMAGE: ikramhub/blink-counter
@@ -76,6 +77,7 @@ docker cp /home/path/hostfile.mp4  <CONTAINER_ID>:/app #copy the file from host 
 ```
 
 - **Example (2):** using the built-in webcam
+
 ```bash
 docker ps #copy the container ID from IMAGE: ikramhub/blink-counter
 docker exec -it <CONTAINER_ID> /bin/bash
